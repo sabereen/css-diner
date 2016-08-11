@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CSS Diner - Where we feast on CSS Selectors!</title>
+    <title>CSS Diner - جایی که ما با انتخابگرهای CSS جشن راه می‌اندازیم</title>
+    <meta charset="utf-8">
     <script src="jquery.js" type="text/javascript" charset="utf-8"></script>
     <script src="levels.js" type="text/javascript" charset="utf-8"></script>
     <script src="restaurant.js" type="text/javascript" charset="utf-8"></script>
     <link rel="icon" type="image/png" href="favicon.png">
-    <link href='http://fonts.googleapis.com/css?family=Exo+2:200,400,600,400italic,600italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+<!--    <link href='http://fonts.googleapis.com/css?family=Exo+2:200,400,600,400italic,600italic' rel='stylesheet' type='text/css'>-->
+    <link rel="stylesheet" href="style.rtl.css" type="text/css" media="screen" title="no title" charset="utf-8">
   </head>
   <body>
 
     <header>
-      CSS Diner
+      بازی CSS Diner
       <div class="logo">
         <plate><apple /></plate>
       </div>
@@ -25,13 +26,13 @@
         <h2 class="order"></h2>
 
         <div class="note">
-          <h3>No worries, you've got this!</h3>
+          <h3>نگران نباشید، خوب جایی آمدید!</h3>
           <p>
-            You're about to learn CSS Selectors!
-            Selectors are how you pick which element to apply styles to.
+            شما به این‌جا آمدید تا انتخابگرهای CSS را یاد بگیرید.
+            انتخابگرها یا Selectorها مشخص می‌کنند که استایل‌های ما باید به کدام عنصرها اعمال شوند.
           </p>
 
-          <h4>Exhibit 1 - A CSS Rule</h4>
+          <h4>یک CSS Rule</h4>
 
 <pre>
 p {
@@ -39,18 +40,17 @@ p {
 }
 </pre>
 
-
-          <p>Here, the "p" is the selector (selects all &lt;p&gt; elements) and applies the margin-bottom style.</p>
+          <p>در این مثال p انتخابگر است (همه‌ی عنصرهای &lt;p&gt; را انتخاب می‌کند) و استایلِ <span style="white-space: nowrap">margin-bottom</span> را به آن‌ها اعمال می‌کند.</p>
           <p>
-            To play, type in a CSS selector in the editor below to select the correct items on the table.
-            If you get it right, you'll advance to the next level.
+            نحوه‌ی بازی به این شکل است که باید در ویرایشگر زیر یک انتخابگر CSS بنویسید تا اشیاء خواسته شده را انتخاب کند، یعنی همان چیزهایی که درحال تکان خوردن هستند.
+            اگر این کار را درست انجام دهید، به مرحله‌ی بعدی می‌روید.
           </p>
-          <p>Hover over the items on the table to see their HTML markup.</p>
-          <p>Get help with selectors on the right! &rarr;</p>
-          <a class="note-toggle" href="#">Ok, got it!</a>
+          <p>موس را روی اشیاء روی میز ببرید تا کد HTML آن‌ها را مشاهده کنید.</p>
+          <p>راهنمایی‌های لازم برای هر انتخابگر را می‌توانید در سمت چپ صفحه ببینید &larr;</p>
+          <a class="note-toggle" href="#">باشه، فهمیدم!</a>
         </div>
 
-        <a class="note-toggle" href="#">Help, I'm stuck!</a>
+        <a class="note-toggle" href="#">کمک، من گیر کردم!</a>
 
         <div class="game-wrapper">
           <div class="table-wrapper">
@@ -68,24 +68,24 @@ p {
 
           <div class="editor-pane">
             <div class="input-header">
-              <div class="file-name">style.css</div> CSS Editor
+              <div class="file-name">style.css</div> ویرایشگر CSS
             </div>
 
           <div class="file-window css-view">
             <div class="line-numbers">
               1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12<br/>13<br/>14<br/>15<br/>16<br/>17<br/>18<br/>19<br/>20
             </div>
-              <input class="input-strobe" type="text" placeholder="Type in a CSS selector"/><span class="plus">+</span><div class="enter-button">enter</div>
+              <input class="input-strobe" type="text" placeholder="را بنویسید CSS در این قسمت انتخابگر"/><span class="plus">+</span><div class="enter-button">بررسی</div>
             <div>
             {<br/>
-            /* Styles would go here. */<br/>
+            /* استایل‌های مربوطه این‌جا قرار می‌گیرند */<br/>
             }
             </div>
             <div class="help">
               <br/>
               /* <br/>
-              Type a number to skip to a level.<br/>
-              Ex &rarr; "5" for level 5 <br/>*/
+              برای گذر از مرحله عددی را وارد کنید<br/>
+              مثلاً برای رفتن به مرحله ۵ بنویسید 5<br/>*/
             </div>
           </div>
         </div>
@@ -93,7 +93,7 @@ p {
         <div class="editor-pane html-view">
           <div class="input-header">
             <div class="file-name">table.html</div>
-            HTML Viewer
+            نمایشگر HTML
           </div>
           <div class="file-window">
             <div class="line-numbers">
@@ -106,18 +106,21 @@ p {
       </div>
 
       <div class="what-is-this">
-        <h2>What is this?</h2>
-        <p>It's a little game to help you learn CSS selectors. Type in the correct selector to complete each level. Get help on the right.</p>
-        <p>It's a work in progress, so please give me feedback!</p>
+        <h2>این چیست؟</h2>
+        <p>این یک بازی کوچک است که به شما انتخابگرهای CSS را آموزش می‌دهد. برای کامل کردن هر مرحله باید انتخابگر مناسب را بنویسید، در صورتی که نیاز به کمک دارید می‌توانید سمت چپ این صفحه را مشاهده کنید.</p>
+        <p>این بازی هنوز جای کار دارد، منتظر نظرات سازنده‌ی شما در این باره هستیم.</p>
         <p>
-          Made by <a href="http://www.twitter.com/flukeout">@flukeout</a> with special thanks to...
+          ساخته شده توسّط <a href="http://www.twitter.com/flukeout"><bdi>@flukeout</bdi></a> با تشکَر ویژه از...
         </p>
         <p>
-          <a href="https://twitter.com/k88hudson">@k88hudson</a>, <a href="http://www.twitter.com/antlam7">@antlam7</a> and <a href="https://twitter.com/smashman2004">@smashman2004</a>.
+          <a href="https://twitter.com/k88hudson"><bdi>@k88hudson</bdi></a>، <a href="http://www.twitter.com/antlam7"><bdi>@antlam7</bdi></a> و <a href="https://twitter.com/smashman2004"><bdi>@smashman2004</bdi></a>.
         </p>
+        <p>ترجمه از مجتبی قاسم زاده تهرانی</p>
+<!--
         <p>
           Please submit issues and PRs at <a href="https://github.com/flukeout/restaurant">this Github repo</a>.
         </p>
+-->
 
 
       </div>
@@ -137,7 +140,7 @@ p {
 
             <h3 class="selector-name"></h3>
             <h2 class="title"></h2>
-            <h3 class="syntax"></h3>
+            <bdi><h3 class="syntax"></h3></bdi>
 
             <div class="hint"></div>
             <div class="examples"></div>
@@ -159,14 +162,14 @@ p {
   <!-- This is the popup that floats over table elements -->
   <div class="helper"></div>
 
-  <script>
+  <script>/*
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
     ga('create', 'UA-62998410-1', 'auto');
-    ga('send', 'pageview');
+    ga('send', 'pageview');*/
 
   </script>
 

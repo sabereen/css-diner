@@ -18,6 +18,19 @@ var blankProgress = {
 
 var progress = JSON.parse(localStorage.getItem("progress")) || blankProgress;
 
+var persian = {
+  digits: '۰۱۲۳۴۵۶۷۸۹'.split(''),
+  number: function (text) {
+    text = text.toString()
+    var result = ''
+    for (var i in text) {
+      if (isNaN(text[i])) result += text[i]
+      else result += this.digits[text[i]]
+    }
+    return result
+  }
+}
+
 $(document).ready(function(){
 
   $(".note-toggle").on("click", function(){
@@ -97,7 +110,7 @@ function buildLevelmenu(){
   for(var i = 0; i < levels.length; i++){
     var level = levels[i];
     var item = document.createElement("a");
-    $(item).html("<span class='level-number'>" + (i+1) + "</span> " + level.syntax);
+    $(item).html("<span class='level-number'>" + persian.number(i+1) + "</span> <bdi>" + level.syntax + '</bdi>');
     $(".level-menu .levels").append(item);
     $(item).on("click",function(){
       finished = false;
@@ -459,7 +472,7 @@ function loadLevel(){
   loadBoard();
   resetTable();
 
-  $(".level-header").html("Level " + (currentLevel+1) + " of " + levels.length);
+  $(".level-header").html("مرحله‌ی " + persian.number(currentLevel+1) + " از " + persian.number(levels.length));
   $(".order").text(level.doThis);
   $("input").val("").focus();
 
